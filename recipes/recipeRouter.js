@@ -16,7 +16,6 @@ router.get('/', (req, res) => {
 });
 
 router.get('/shoppinglist/:id', (req, res) => {
-  console.log('id', req.params.id);
   Recipes.getShoppingList(req.params.id)
     .then(list => {
       res.json(list);
@@ -28,7 +27,6 @@ router.get('/shoppinglist/:id', (req, res) => {
 });
 
 router.get('/instructions/:id', (req, res) => {
-  console.log('id', req.params.id);
   Recipes.getInstructions(req.params.id)
     .then(inst => {
       res.json(inst);
